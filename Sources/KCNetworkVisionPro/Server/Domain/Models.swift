@@ -71,6 +71,9 @@ public struct HerosData: Codable, Identifiable , Hashable {
         //goku
         if id.uuidString == "D13A40E5-4418-4223-9CE6-D2F9A28EBE94"{
             self.id3DModel = "goku.usdz"
+        }
+       else if id.uuidString == "6E1B907C-EB3A-45BA-AE03-44FA251F64E9"{
+           self.id3DModel = "vegeta.usdz"
         } else{
             self.id3DModel = id3DModel
         }
