@@ -8,13 +8,13 @@
 import Foundation
 
 
-protocol NetworkLoginProtocol {
+public protocol NetworkLoginProtocol {
     func loginApp(user: String, password: String) async -> Bool
 }
 
 
 
-final class NetworkLogin: NetworkLoginProtocol{
+public final class NetworkLogin: NetworkLoginProtocol{
     
     public init(){}  //inicializador necesario para usar en las Apps sino no se puede usar
     
@@ -63,7 +63,7 @@ final class NetworkLogin: NetworkLoginProtocol{
 }
 
 
-final class NetworkLoginFake: NetworkLoginProtocol{
+public final class NetworkLoginFake: NetworkLoginProtocol{
     public init(){} //inicializador necesario para usar en las Apps sino no se puede usar
     
     public func loginApp(user: String, password: String) async -> Bool {
