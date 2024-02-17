@@ -47,7 +47,7 @@ public struct HeroTransformationsMOdelRequest: Codable {
 
 // Models to TRANSFORM
 
-public struct HerosData: Codable, Identifiable {
+public struct HerosData: Codable, Identifiable , Hashable {
     public let id: UUID
     public let favorite: Bool
     public let description: String
@@ -75,4 +75,15 @@ public struct HerosData: Codable, Identifiable {
             self.id3DModel = id3DModel
         }
     }
+    
+    
+    // Implementing Hashable protocol
+        public func hash(into hasher: inout Hasher) {
+            hasher.combine(id)
+        }
+        
+        // Implementing Equatable protocol
+        public static func ==(lhs: HerosData, rhs: HerosData) -> Bool {
+            return lhs.id == rhs.id
+        }
 }
