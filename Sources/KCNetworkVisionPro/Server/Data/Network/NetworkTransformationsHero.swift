@@ -8,9 +8,13 @@
 import Foundation
 
 
+//Protocolo
+ protocol NetworkTransformationsHeroProtocol {
+     func getHerosTransformation(idHero: String) async -> [HerosTransformationsModelResponse]
+}
 
 
-final class NetworkTransformationsHero{
+public final class NetworkTransformationsHero: NetworkTransformationsHeroProtocol{
     public init(){}
     
     public func getHerosTransformation(idHero: String) async -> [HerosTransformationsModelResponse] {
@@ -49,6 +53,19 @@ final class NetworkTransformationsHero{
 }
 
 
+
+public final class NetworkTransformationsHeroFake: NetworkTransformationsHeroProtocol{
+    public init(){}
+    
+    public func getHerosTransformation(idHero: String) async -> [HerosTransformationsModelResponse] {
+        
+        let model1 = HerosTransformationsModelResponse(id: UUID(), name: "Transformacion 1", description: "Transformacion de Test de datos 1 de cualquier heroe", photo: "https://areajugones.sport.es/wp-content/uploads/2021/05/ozarru.jpg.webp")
+        let model2 = HerosTransformationsModelResponse(id: UUID(), name: "Transformacion 2", description: "Transformacion de Test de datos 2 de cualquier heroe", photo: "https://areajugones.sport.es/wp-content/uploads/2017/05/Goku_Kaio-Ken_Coolers_Revenge.jpg")
+        let model3 = HerosTransformationsModelResponse(id: UUID(), name: "Transformacion 3", description: "Transformacion de Test de datos 3 de cualquier heroe", photo: "https://areajugones.sport.es/wp-content/uploads/2021/05/wp4113614.jpg.webp")
+        
+        return [model1, model2, model3]
+    }
+}
 
 
 

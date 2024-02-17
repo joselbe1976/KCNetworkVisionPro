@@ -8,9 +8,13 @@
 import Foundation
 
 
+//Protocolo
+protocol NetworkLocalizationsProtocol {
+     func getHerosLocalizations(idHero: String) async -> [HerosLocationsModelResponse]
+}
 
 
-final class NetworkLocalizations{
+public final class NetworkLocalizations: NetworkLocalizationsProtocol{
     public init(){}
     
     public func getHerosLocalizations(idHero: String) async -> [HerosLocationsModelResponse] {
@@ -49,7 +53,20 @@ final class NetworkLocalizations{
 }
 
 
-
+public final class NetworkLocalizationsFake: NetworkLocalizationsProtocol{
+    public init(){}
+    
+    public func getHerosLocalizations(idHero: String) async -> [HerosLocationsModelResponse] {
+       
+        //return same always
+            
+       let model1 = HerosLocationsModelResponse(longitud: "-3.2530422156686045", latitud: "40.596325093190096", id: UUID())
+       let model2 = HerosLocationsModelResponse(longitud: "-3.6892525805372927", latitud: "40.42782823915867", id: UUID())
+       
+    
+        return [model1, model2]
+    }
+}
 
 
 
