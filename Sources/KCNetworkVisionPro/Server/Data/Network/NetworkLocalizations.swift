@@ -9,7 +9,7 @@ import Foundation
 
 
 //Protocolo
-protocol NetworkLocalizationsProtocol {
+public protocol NetworkLocalizationsProtocol {
      func getHerosLocalizations(idHero: String) async -> [HerosLocationsModelResponse]
 }
 

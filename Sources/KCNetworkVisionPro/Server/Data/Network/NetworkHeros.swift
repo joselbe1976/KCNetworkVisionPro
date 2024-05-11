@@ -9,7 +9,7 @@ import Foundation
 
 
 //Protocolo
-protocol NetworkHerosProtocol {
+public protocol NetworkHerosProtocol {
     func getHeros(filter: String) async -> [HerosModelResponse]
 }
 

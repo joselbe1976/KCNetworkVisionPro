@@ -9,7 +9,7 @@ import Foundation
 
 
 //Protocolo
-protocol UseCaseHerosProtocol {
+public protocol UseCaseHerosProtocol {
      func getData(filter: String) async -> [HerosData]
 }
 
