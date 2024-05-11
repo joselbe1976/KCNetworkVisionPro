@@ -93,7 +93,7 @@ public struct HerosData: Codable, Identifiable , Hashable {
     
     
     //Mock a Hero
-    public func getHeroMock() -> HerosData{
+    public static func getHeroMock() -> HerosData{
        
         //locations
         let model1L = HerosLocationsModelResponse(longitud: "-3.2530422156686045", latitud: "40.596325093190096", id: UUID())
