@@ -17,7 +17,7 @@ struct ConstantsLibrary{
     
     
     //For Testing only. Def Token JWT.
-    public static var CONST_TEST_TOKEN_JWT:String = ""
+    nonisolated(unsafe) public static var CONST_TEST_TOKEN_JWT:String = ""
     
 }
 

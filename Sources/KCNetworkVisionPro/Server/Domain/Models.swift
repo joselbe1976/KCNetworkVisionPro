@@ -9,7 +9,7 @@ import Foundation
 
 //Response / Request models
 
-public struct HerosModelResponse: Codable, Identifiable {
+public struct HerosModelResponse: Codable, Identifiable, Sendable {
     public let id: UUID
     public let favorite: Bool
     public let description: String
@@ -19,26 +19,26 @@ public struct HerosModelResponse: Codable, Identifiable {
 
 
 //Filter the request od Heros by name
-public struct HeroModelRequest: Codable {
+public struct HeroModelRequest: Codable, Sendable {
     public let name: String
 }
 
 
 
-public struct HerosLocationsModelResponse: Codable, Identifiable {
+public struct HerosLocationsModelResponse: Codable, Identifiable, Sendable {
     public let longitud: String
     public let latitud: String
     public let id: UUID
 }
 
 
-public struct HerosTransformationsModelResponse: Codable, Identifiable {
+public struct HerosTransformationsModelResponse: Codable, Identifiable, Sendable {
     public let id: UUID
     public let name: String
     public let description: String
     public let photo: String
 }
-public struct HeroTransformationsMOdelRequest: Codable {
+public struct HeroTransformationsMOdelRequest: Codable, Sendable {
     public let id: String
 }
 
@@ -47,7 +47,7 @@ public struct HeroTransformationsMOdelRequest: Codable {
 
 // Models to TRANSFORM
 
-public struct HerosData: Codable, Identifiable , Hashable {
+public struct HerosData: Codable, Identifiable , Hashable, Sendable {
     public let id: UUID
     public let favorite: Bool
     public let description: String
