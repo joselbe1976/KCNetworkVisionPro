@@ -70,10 +70,10 @@ public struct HerosData: Codable, Identifiable , Hashable, Sendable {
         
         //05-2025. Server change
         //goku
-        if id.uuidString == "88960359-a208-41a9-ad47-ada0b5433c83"{
+        if id.uuidString == "88960359-A208-41A9-AD47-ADA0B5433C83"{
             self.id3DModel = "goku"
         }
-        else if id.uuidString == "9870bfb8-ef65-4a0e-b9ab-7904e6d77625"{
+        else if id.uuidString == "9870BFB8-EF65-4A0E-B9AB-7904E6D77625"{
             self.id3DModel = "Vegeta"
         } else{
             self.id3DModel = id3DModel
