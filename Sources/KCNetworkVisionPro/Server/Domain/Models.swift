@@ -68,6 +68,7 @@ public struct HerosData: Codable, Identifiable , Hashable, Sendable {
         self.locations = locations
         self.transformations = transformations
         
+        //05-2025. Server change
         //goku
         if id.uuidString == "88960359-a208-41a9-ad47-ada0b5433c83"{
             self.id3DModel = "goku"
